@@ -42,9 +42,47 @@
           "Version": "0.1"
         },
         "Files": [
+          "Assimp32.dll",
           "FODEconfig.exe",
           "FOnline.exe",
           "FOUpdater.exe"
+        ],
+        "Updated": "2014-03-30"
+      }
+      "reloaded": {
+        "LaunchPrograms": [
+          {
+            "Name": "Game - Direct3D",
+            "File": "FOnline.exe"
+          },
+          {
+            "Name": "Game - OpenGL",
+            "File": "FOnlineGL.exe"
+          },
+          {
+            "Name": "FOConfig",
+            "File": "FOConfig.exe"
+          },
+          {
+            "Name": "FO2238 Config",
+            "File": "FO2238Config.exe"
+          },
+          {
+            "Name": "Update Game",
+            "File": "Updater.exe"
+          }
+        ],
+        "Dependencies": null,
+        "InstallScript": {
+          "Checksum": "",
+          "Url": "http://fodev.net/play/scripts/install-reloaded.cs",
+          "Version": "0.1"
+        },
+        "Files": [
+          "Assimp32.dll",
+          "FOnline.exe",
+          "FO2238Config.exe",
+          "Updater.exe"
         ],
         "Updated": "2014-03-30"
       }
