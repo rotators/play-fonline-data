@@ -18,6 +18,10 @@
           {
             "Name": "FODEconfig",
             "File": "FODEconfig.exe"
+          },
+          {
+            "Name": "Update Game",
+            "File": "FOUpdater.exe"
           }
         ],
         "Dependencies": [
@@ -33,16 +37,16 @@
           }
         ],
         "InstallScript": {
-          "ScriptUrl": "http://fodev.net/play/scripts/install-fode.cs",
-          "ScriptUpdated": "2014-03-15",
-          "ScriptVersion": "0.1"
+          "Checksum": "3F8A08825B793835749449E77B7B7B836270D55E",
+          "Url": "http://fodev.net/play/scripts/install-fode.cs",
+          "Version": "0.1"
         },
         "Files": [
           "FODEconfig.exe",
           "FOnline.exe",
           "FOUpdater.exe"
         ],
-        "Updated": "2014-03-15"
+        "Updated": "2014-03-30"
       }
     }
   }
