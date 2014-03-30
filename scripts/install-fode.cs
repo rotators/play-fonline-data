@@ -12,10 +12,10 @@ using PlayFO.Scripts;
 
 public class Script : IInstallScript
 {
-	public bool Install(string tempDir, string installDir)
+	public bool Install(string game, string tempDir, string installDir)
 	{
 		String filename = tempDir + Path.DirectorySeparatorChar + "FOUpdater.zip";
-		PlayFO.frmDownload download = new PlayFO.frmDownload("FODE", "http://fode.eu/files/download/2-fonline-desert-europe-game-client/", filename);
+		PlayFO.frmDownload download = new PlayFO.frmDownload(game, "http://fode.eu/files/download/2-fonline-desert-europe-game-client/", filename);
 		if (!download.IsDisposed)
 			download.ShowDialog();
 
