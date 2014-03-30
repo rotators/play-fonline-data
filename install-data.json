@@ -28,12 +28,16 @@
           {
             "Name": "MASTER.DAT",
             "Description": "MASTER.DAT from Fallout 2",
-            "ScriptURL": "http://fodev.net/play/scripts/fo2-data.cs"
+            "Script": {
+              "Url": "http://fodev.net/play/scripts/fo2-data.cs"
+            }
           },
           {
             "Name": "CRITTER.DAT",
             "Description": "CRITTER.DAT from Fallout 2",
-            "ScriptURL": "http://fodev.net/play/scripts/fo2-data.cs"
+            "Script": {
+              "Url": "http://fodev.net/play/scripts/fo2-data.cs"
+            }
           }
         ],
         "InstallScript": {
@@ -48,7 +52,7 @@
           "FOUpdater.exe"
         ],
         "Updated": "2014-03-30"
-      }
+      },
       "reloaded": {
         "LaunchPrograms": [
           {
