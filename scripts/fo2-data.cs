@@ -1,6 +1,6 @@
 using System;
 using System.Windows.Forms;
-using PlayFO.Scripts;
+using PlayFOnline.Scripts;
 using DATLib;
 
 public class Script : IResolveScript
@@ -33,6 +33,7 @@ public class Script : IResolveScript
 				loadedDat.FileList.Exists(x => x.FileName.ToLower() == "hanpwrbl.frm")
 			   );
 	   }
+	   loadedDat.Close();
 	   return valid;
 	}
 }
