@@ -8,16 +8,18 @@ using System.Windows.Forms;
 using System.IO;
 using Ionic.Zip;
 using PlayFOnline;
+using PlayFOnline.Core;
 using PlayFOnline.Scripts;
 
 public class Script : IInstallScript
 {
     public bool Install(string game, string tempDir, string installDir)
     {
-            String filename = tempDir + Path.DirectorySeparatorChar + "FOnlineReloaded-Full.zip";
-            PlayFOnline.frmDownload download = new PlayFOnline.frmDownload(game, "http://www.fonline-reloaded.net/files/dl_fullclient.php", filename);
-            if (!download.IsDisposed)
-                download.ShowDialog();
+            string filename = Path.Combine(tempDir, "FOnlineReloaded-Full.zip");
+            string url = "http://www.fonline-reloaded.net/files/dl_fullclient.php";
+
+            ProgressDownloader downloader = new ProgressDownloader();
+            downloader.Download(game, url, filename);
             
             if (!File.Exists(filename))
             {

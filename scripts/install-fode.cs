@@ -8,16 +8,18 @@ using System.Windows.Forms;
 using System.IO;
 using Ionic.Zip;
 using PlayFOnline;
+using PlayFOnline.Core;
 using PlayFOnline.Scripts;
 
 public class Script : IInstallScript
 {
 	public bool Install(string game, string tempDir, string installDir)
 	{
-		String filename = tempDir + Path.DirectorySeparatorChar + "FOUpdater.zip";
-		PlayFOnline.frmDownload download = new PlayFOnline.frmDownload(game, "http://fode.eu/files/download/2-fonline-desert-europe-game-client/", filename);
-		if (!download.IsDisposed)
-			download.ShowDialog();
+		string filename = Path.Combine(tempDir, "FOUpdater.zip");
+		string url = "http://fode.eu/files/download/2-fonline-desert-europe-game-client/";
+
+		ProgressDownloader downloader = new ProgressDownloader();
+		downloader.Download(game, url, filename);
 
 		if (!File.Exists(filename))
 		{
