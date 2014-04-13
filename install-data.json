@@ -110,14 +110,68 @@
           }
         ],
         "Dependencies": null,
-        "InstallScript": {
-          "Checksum": "3F8A08825B793835749449E77B7B7B836270D55E",
-          "Url": "http://fodev.net/play/scripts/install-tlamk2.cs",
-          "Version": "0.1"
-        },
+        "InstallScript": null,
         "Files": [
           "Assimp32.dll",
           "ConfiguratorMK2.exe",
+          "FOnline.exe",
+          "Updater.exe"
+        ],
+        "Updated": "2014-04-13"
+      },
+      "requiem": {
+        "LaunchPrograms": [
+          {
+            "Name": "Game - Direct3D",
+            "File": "FOnlineD3D.exe"
+          },
+          {
+            "Name": "Game - OpenGL",
+            "File": "FOnline.exe"
+          },
+          {
+            "Name": "FOConfig",
+            "File": "Config.exe"
+          },
+          {
+            "Name": "Update Game",
+            "File": "Updater.exe"
+          }
+        ],
+        "Dependencies": null,
+        "InstallScript": null,
+        "Files": [
+          "Assimp32.dll",
+          "FOConfig.exe",
+          "FOnline.exe",
+          "Updater.exe"
+        ],
+        "Updated": "2014-04-13"
+      },
+      "goon": {
+        "LaunchPrograms": [
+          {
+            "Name": "Game - Direct3D",
+            "File": "FOnline.exe"
+          },
+          {
+            "Name": "Game - OpenGL",
+            "File": "FOnlineOGL.exe"
+          },
+          {
+            "Name": "FOConfig",
+            "File": "Config.exe"
+          },
+          {
+            "Name": "Update Game",
+            "File": "Updater.exe"
+          }
+        ],
+        "Dependencies": null,
+        "InstallScript": null,
+        "Files": [
+          "Assimp32.dll",
+          "FOConfig.exe",
           "FOnline.exe",
           "Updater.exe"
         ],
