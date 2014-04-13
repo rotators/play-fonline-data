@@ -51,7 +51,44 @@
           "FOnline.exe",
           "FOUpdater.exe"
         ],
-        "Updated": "2014-03-30"
+        "Updated": "2014-04-13"
+      },
+      "fonline2": {
+        "LaunchPrograms": [
+          {
+            "Name": "Game - Direct3D",
+            "File": "FOnlineD3D.exe"
+          },
+          {
+            "Name": "Game - OpenGL",
+            "File": "FOnline.exe"
+          },
+          {
+            "Name": "FOConfig",
+            "File": "FOConfig.exe"
+          },
+          {
+            "Name": "FOConfigPL",
+            "File": "FOConfigPL.exe"
+          },
+          {
+            "Name": "Update Game",
+            "File": "FOUpdater.exe"
+          }
+        ],
+        "Dependencies": null,
+        "InstallScript": {
+          "Checksum": "3F8A08825B793835749449E77B7B7B836270D55E",
+          "Url": "http://fodev.net/play/scripts/install-fonline2.cs",
+          "Version": "0.1"
+        },
+        "Files": [
+          "Assimp32.dll",
+          "FOConfigPL.exe",
+          "FOnline.exe",
+          "FOUpdater.exe"
+        ],
+        "Updated": "2014-04-13"
       },
       "reloaded": {
         "LaunchPrograms": [
@@ -88,7 +125,7 @@
           "FO2238Config.exe",
           "Updater.exe"
         ],
-        "Updated": "2014-03-30"
+        "Updated": "2014-04-13"
       }
     }
   }
