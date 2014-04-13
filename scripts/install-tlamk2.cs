@@ -16,7 +16,7 @@ public class Script : IInstallScript
     public bool Install(string game, string tempDir, string installDir)
     {
             string filename = Path.Combine(tempDir, "TLA Mk2 Client.exe");
-            string url = "https://downloader.disk.yandex.ru/disk/141c62a898a00de4458ecfd6c6adeb3a/534a333b/AOon8GHn2M9o9BoY0xWSCFNEVKJf2GRRHygsy5OF16UrwBMLfrpHUQ-k56jUr8ePiopA0jsOU7sDZwIZpHlexA%3D%3D?uid=0&filename=TLA%20Mk2%20Client.exe&disposition=attachment&hash=otY2WCTql9UNe62vR7OXQR5V7VcwdypR4oxI/MWV/14%3D&limit=0&content_type=application%2Fx-msdownload&fsize=579763028&hid=b3ffd84ff6bf27c913bed8a8efa93544&media_type=executable";
+            string url = ""; // Needs stable download URL.
 
             ProgressDownloader downloader = new ProgressDownloader();
             downloader.Download(game, url, filename);

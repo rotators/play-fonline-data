@@ -43,7 +43,7 @@
         "InstallScript": {
           "Checksum": "3F8A08825B793835749449E77B7B7B836270D55E",
           "Url": "http://fodev.net/play/scripts/install-fode.cs",
-          "Version": "0.1"
+          "Version": "0.2"
         },
         "Files": [
           "Assimp32.dll",
@@ -80,7 +80,7 @@
         "InstallScript": {
           "Checksum": "3F8A08825B793835749449E77B7B7B836270D55E",
           "Url": "http://fodev.net/play/scripts/install-fonline2.cs",
-          "Version": "0.1"
+          "Version": "0.2"
         },
         "Files": [
           "Assimp32.dll",
@@ -168,7 +168,11 @@
           }
         ],
         "Dependencies": null,
-        "InstallScript": null,
+        "InstallScript": {
+          "Checksum": "3F8A08825B793835749449E77B7B7B836270D55E",
+          "Url": "http://fodev.net/play/scripts/install-goonhaven.cs",
+          "Version": "0.1"
+        },
         "Files": [
           "Assimp32.dll",
           "FOConfig.exe",
@@ -204,7 +208,7 @@
         "InstallScript": {
           "Checksum": "",
           "Url": "http://fodev.net/play/scripts/install-reloaded.cs",
-          "Version": "0.1"
+          "Version": "0.2"
         },
         "Files": [
           "Assimp32.dll",
