@@ -20,7 +20,7 @@ public class Script : IInstallScript
 
             ProgressDownloader downloader = new ProgressDownloader();
             downloader.Download(game, url, filename);
-            
+
             if (!File.Exists(filename))
             {
                 MessageBox.Show(filename + " not found after download!");
@@ -32,7 +32,7 @@ public class Script : IInstallScript
             {
                 zip = ZipFile.Read(filename);
             }
-            catch(ZipException ex)
+            catch (ZipException ex)
             {
                 MessageBox.Show(string.Format("Error when loading {0}: {1}", filename, ex.Message));
                 return false;
@@ -42,14 +42,23 @@ public class Script : IInstallScript
             {
                 if (entry.FileName != "FOnline Reloaded/")
                 {
-                    entry.FileName = entry.FileName.Replace("FOnline Reloaded/", "");
-                    entry.Extract(installDir);
+                    entry.FileName = entry.FileName.Replace("FOnline Reloaded/", string.Empty);
+                    entry.Extract(installDir, ExtractExistingFileAction.OverwriteSilently);
                 }
             });
+            zip.Dispose();
+
+            string updater = Path.Combine(installDir, "Updater.exe");
 
             ProcessStartInfo procInfo = new ProcessStartInfo();
             procInfo.WorkingDirectory = installDir;
-            procInfo.FileName = installDir + "\\" + "Updater.exe";
+            procInfo.FileName = updater;
+            if (!File.Exists(updater))
+            {
+                MessageBox.Show("{0} not found, can't update!", updater);
+                return false;
+            }
+
             Process proc = Process.Start(procInfo);
             while (!proc.HasExited)
             {
@@ -58,12 +67,17 @@ public class Script : IInstallScript
                 const int BN_CLICKED = 245;
                 Win32.SendMessage(hwndChild, BN_CLICKED, 0, 0);
 
-                if(Win32.WindowContainsTextString(proc.MainWindowHandle, "Checking end."))
+                if (Win32.WindowContainsTextString(proc.MainWindowHandle, "Checking end."))
                     proc.Kill();
             }
-
-            File.Delete(filename);
-
+            try
+            {
+                File.Delete(filename);
+            }
+            catch (IOException ex)
+            {
+                MessageBox.Show(string.Format("Error when deleting {0}: {1}", filename, ex.Message));
+            }
             return true;
     }
 }
