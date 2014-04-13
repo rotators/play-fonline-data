@@ -90,6 +90,39 @@
         ],
         "Updated": "2014-04-13"
       },
+      "tla2": {
+        "LaunchPrograms": [
+          {
+            "Name": "Game - Direct3D",
+            "File": "FOnline.exe"
+          },
+          {
+            "Name": "Game - OpenGL",
+            "File": "FOnlineOGL.exe"
+          },
+          {
+            "Name": "FOConfig - TLA",
+            "File": "ConfiguratorMK2.exe"
+          },
+          {
+            "Name": "Update Game",
+            "File": "Updater.exe"
+          }
+        ],
+        "Dependencies": null,
+        "InstallScript": {
+          "Checksum": "3F8A08825B793835749449E77B7B7B836270D55E",
+          "Url": "http://fodev.net/play/scripts/install-tlamk2.cs",
+          "Version": "0.1"
+        },
+        "Files": [
+          "Assimp32.dll",
+          "ConfiguratorMK2.exe",
+          "FOnline.exe",
+          "Updater.exe"
+        ],
+        "Updated": "2014-04-13"
+      },
       "reloaded": {
         "LaunchPrograms": [
           {
