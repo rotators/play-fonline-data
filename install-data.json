@@ -77,11 +77,7 @@
           }
         ],
         "Dependencies": null,
-        "InstallScript": {
-          "Checksum": "3F8A08825B793835749449E77B7B7B836270D55E",
-          "Url": "http://fodev.net/play/scripts/install-fonline2.cs",
-          "Version": "0.2"
-        },
+        "InstallScript": null,
         "Files": [
           "Assimp32.dll",
           "FOConfigPL.exe",
