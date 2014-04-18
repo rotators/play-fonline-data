@@ -65,7 +65,7 @@ public class Script : IInstallScript
                 IntPtr hwndChild = Win32.FindWindowEx((IntPtr)proc.MainWindowHandle, IntPtr.Zero, "TButton", "Check");
 
                 const int BN_CLICKED = 245;
-                Win32.SendMessage(hwndChild, BN_CLICKED, 0, 0);
+                Win32.SendMessageEx(hwndChild, BN_CLICKED, 0, 0);
 
                 if (Win32.WindowContainsTextString(proc.MainWindowHandle, "Checking end."))
                     proc.Kill();
